@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Header.module.css';
+import Navigation from '../Navigation/Navigation';
 
 function Header(props) {
   return (
@@ -11,30 +12,7 @@ function Header(props) {
           </p>
           <span className={styles.header__description}>лизинговая компания</span>
         </div>
-        <div className={styles.nav__burger}></div>
-        <div className={styles.header__right}>
-          <div className={styles.nav__close}></div>
-          <nav className={styles.nav}>
-            <ul className={styles.nav__list}>
-              <li className={styles.nav__list_item}>
-                <a href='#' className={styles.nav__link}>
-                  Лизинг
-                </a>
-              </li>
-              <li className={styles.nav__list_item}>
-                <a href='#' className={styles.nav__link}>
-                  Каталог
-                </a>
-              </li>
-              <li className={styles.nav__list_item}>
-                <a href='#' className={styles.nav__link}>
-                  О нас
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <button className={styles.nav__button}>Оставить заявку</button>
-        </div>
+        <Navigation />
       </div>
     </header>
   );
