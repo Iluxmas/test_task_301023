@@ -11,27 +11,29 @@ function Header(props) {
           </p>
           <span className={styles.header__description}>лизинговая компания</span>
         </div>
+        <div className={styles.nav__burger}></div>
         <div className={styles.header__right}>
-          <nav className={styles.header__nav}>
-            <ul className={styles.header__nav_list}>
-              <li className={styles.header__list_item}>
-                <a href='#' className={styles.header__nav_link}>
+          <div className={styles.nav__close}></div>
+          <nav className={styles.nav}>
+            <ul className={styles.nav__list}>
+              <li className={styles.nav__list_item}>
+                <a href='#' className={styles.nav__link}>
                   Лизинг
                 </a>
               </li>
-              <li className={styles.header__list_item}>
-                <a href='#' className={styles.header__nav_link}>
+              <li className={styles.nav__list_item}>
+                <a href='#' className={styles.nav__link}>
                   Каталог
                 </a>
               </li>
-              <li className={styles.header__list_item}>
-                <a href='#' className={styles.header__nav_link}>
+              <li className={styles.nav__list_item}>
+                <a href='#' className={styles.nav__link}>
                   О нас
                 </a>
               </li>
             </ul>
           </nav>
-          <button className={styles.header__button}>Оставить заявку</button>
+          <button className={styles.nav__button}>Оставить заявку</button>
         </div>
       </div>
     </header>

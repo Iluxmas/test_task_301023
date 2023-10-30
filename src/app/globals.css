@@ -1,3 +1,8 @@
+:root {
+  --ui-orange: #FF9514;
+  --ui-white: #fff; 
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
