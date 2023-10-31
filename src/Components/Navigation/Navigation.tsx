@@ -3,7 +3,11 @@
 import React, { useState } from 'react';
 import styles from './Navigation.module.css';
 
-function Navigation(props) {
+interface NavigationProps {
+  onModalOpen: () => void;
+}
+
+function Navigation({ onModalOpen }: NavigationProps) {
   const [isOpened, setIsOpened] = useState(false);
 
   const menuClass = [styles.nav];
@@ -48,7 +52,9 @@ function Navigation(props) {
             </a>
           </li>
         </ul>
-        <button className={styles.nav__button}>Оставить заявку</button>
+        <button className={styles.nav__button} onClick={onModalOpen}>
+          Оставить заявку
+        </button>
       </nav>
     </>
   );

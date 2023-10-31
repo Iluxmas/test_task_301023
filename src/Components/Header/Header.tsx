@@ -2,7 +2,11 @@ import React from 'react';
 import styles from './Header.module.css';
 import Navigation from '../Navigation/Navigation';
 
-function Header(props) {
+interface HeaderProps {
+  onModalOpen: () => void;
+}
+
+function Header({ onModalOpen }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
@@ -12,7 +16,7 @@ function Header(props) {
           </p>
           <span className={styles.header__description}>лизинговая компания</span>
         </div>
-        <Navigation />
+        <Navigation onModalOpen={onModalOpen} />
       </div>
     </header>
   );

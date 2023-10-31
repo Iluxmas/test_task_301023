@@ -1,7 +1,16 @@
 .header {
   width: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 50;
+  background-color: #000;
+  top: 0;
 }
-
+@media screen and (min-width: 768px) {
+  .header {
+    background-color: #fff;
+  }
+}
 .header__container {
   width: 100%;
   max-width: 1440px;
@@ -10,7 +19,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #000;
+
   overflow: hidden;
 }
 
@@ -52,6 +61,7 @@
   font-weight: 900;
   font-size: 30px;
   line-height: 34px;
+  user-select: none;
 }
 
 .header__logo_accent {
@@ -65,6 +75,7 @@
 
 .header__description {
   display: none;
+  user-select: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -72,8 +83,8 @@
     display: inline;
     height: 30px;
     padding-left: 17px;
-    border-left: 1px solid rgba(17, 17, 17, 0.50);;
-    color: rgba(17, 17, 17, 0.50);
+    border-left: 1px solid rgba(17, 17, 17, 0.5);
+    color: rgba(17, 17, 17, 0.5);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

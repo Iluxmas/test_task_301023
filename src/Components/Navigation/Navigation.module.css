@@ -25,20 +25,21 @@
   top: 0;
   right: 0;
   display: flex;
-  /* display: none; */
   flex-direction: column;
   min-height: 100vh;
   width: 260px;
   background-color: var(--ui-white);
-  z-index: 1000;
-  padding: 24px 20px 24px 24px;
+  z-index: 800;
+  padding: 24px 20px 104px 24px;
 }
+
 @media screen and (max-width: 1023px) {
   .nav {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
   }
 }
+
 @media screen and (min-width: 768px) {
   .nav {
     width: 330px;
@@ -56,24 +57,10 @@
     width: auto;
   }
 }
+
 .nav__opened {
   transform: translate(0);
 }
-/* .nav {
-
-
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-@media screen and (min-width: 1024px) {
-  .nav {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    margin: 0;
-  }
-} */
 
 .nav__close {
   width: 14px;
@@ -86,6 +73,7 @@
   margin-bottom: 8px;
   cursor: pointer;
 }
+
 @media screen and (min-width: 1024px) {
   .nav__close {
     display: none;
@@ -98,6 +86,7 @@
   flex-direction: column;
   gap: 24px;
 }
+
 @media screen and (min-width: 1024px) {
   .nav__list {
     flex-direction: row;
@@ -111,46 +100,76 @@
   }
 }
 
-.nav__list_item:hover  .nav__submenu {
+.nav__list_item:hover .nav__submenu {
   display: flex;
   flex-direction: column;
 }
 
-
-/* SUBMENU */
 .nav__submenu {
-  padding: 8px 0;
-  display: none;
-  position: absolute;
-  top: 110%;
-  background-color: var(--ui-white);
+  width: 100%;
   list-style-type: none;
-  overflow: hidden;
-  border: 1px solid #F3F3F4;
-  border-radius: 15px;
-  box-shadow: 0px 14px 24px 0px rgba(51, 51, 51, 0.12), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
+  /* padding-left: 12px; */
 }
 
 .nav__submenu_list_item {
+  width: 100%;
   color: #111;
-  padding: 8px 0;
   height: fit-content;
 }
-.nav__submenu_list_item:hover {
-background-color: #F1F1F1;
-}
+
 .nav__submenu_link {
+  display: inline-block;
+  width: 100%;
   white-space: nowrap;
-  padding: 8px 16px;
+  padding: 8px 14px;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
 }
-.nav__submenu_link:hover {
-  padding: 8px 16px;
+
+.nav__submenu_list_item:hover {
+  background-color: #f1f1f1;
 }
 
+/* SUBMENU */
+@media screen and (min-width: 1024px) {
+  .nav__submenu {
+    padding: 8px 0;
+    display: none;
+    position: absolute;
+    top: 110%;
+    background-color: var(--ui-white);
+    width: auto;
+    overflow: hidden;
+    border: 1px solid #f3f3f4;
+    border-radius: 15px;
+    box-shadow: 0px 14px 24px 0px rgba(51, 51, 51, 0.12), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
+  }
+
+  .nav__submenu_list_item {
+    color: #111;
+    padding: 8px 0;
+    height: fit-content;
+  }
+
+  .nav__submenu_list_item:hover {
+    background-color: #f1f1f1;
+  }
+
+  .nav__submenu_link {
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .nav__submenu_link:hover {
+    padding: 8px 16px;
+  }
+}
 
 .nav__link {
   color: #575757;
@@ -158,8 +177,6 @@ background-color: #F1F1F1;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-}
-@media screen and (min-width: 768px) {
 }
 
 @media screen and (min-width: 1024px) {
@@ -173,6 +190,7 @@ background-color: #F1F1F1;
     border-radius: 8px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .nav__link {
     color: #575757;
@@ -186,8 +204,6 @@ background-color: #F1F1F1;
   background: #f3f3f4;
 }
 
-
-
 .nav__button {
   margin-top: auto;
   line-height: 24px;
@@ -195,7 +211,7 @@ background-color: #F1F1F1;
   font-weight: 700;
   font-family: var(--font-gilroy);
   background-color: var(--ui-orange);
-  border: 1px solid #ff9514;
+  border: 1px solid var(--ui-orange);
   outline: none;
   color: var(--ui-white);
   border-radius: 24px;
@@ -208,8 +224,8 @@ background-color: #F1F1F1;
     font-size: 16px;
     font-weight: 700;
     background-color: transparent;
-    color: #ff9514;
-    border: 1px solid #ff9514;
+    color: var(--ui-orange);
+    border: 1px solid var(--ui-orange);
     border-radius: 24px;
     padding: 12px 24px;
     margin-left: 24px;
