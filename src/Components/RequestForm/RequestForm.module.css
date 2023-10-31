@@ -17,7 +17,7 @@
   padding: 24px 20px 70px;
   position: relative;
   z-index: 9999;
-  background-color: #fff;
+  background-color: var(--ui-white);
   border-radius: 32px 32px 0px 0px;
   /* transform: translateY(-100%); */
   transition: transform 0.3s ease-in-out;
@@ -73,7 +73,7 @@
   position: absolute;
   top: 24px;
   right: 20px;
-  background-color: #f3f3f4;
+  background-color: var(--ui-forminputbcg);
   background-image: url('../../../public/images/close_button.svg');
   background-size: 8px;
   background-position: center;
@@ -93,7 +93,7 @@
   }
 }
 .form__title {
-  color: #111;
+  color: var(--ui-darkgray);
   font-family: var(--font-nekst);
   margin-bottom: 16px;
   font-size: 22px;
@@ -103,7 +103,7 @@
 }
 
 .form__subtitle {
-  color: #575757;
+  color: var(--ui-activegray);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -148,7 +148,7 @@
   left: 24px;
   top: 8px;
   display: none;
-  color: #575757;
+  color: var(--ui-activegray);
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -159,8 +159,8 @@
   height: 48px;
   width: 100%;
   border-radius: 16px;
-  background-color: #f3f3f4;
-  color: #575757;
+  background-color: var(--ui-forminputbcg);
+  color: var(--ui-activegray);
   border: none;
   padding: 12px 24px;
 }
@@ -175,7 +175,7 @@
   padding: 24px 24px 8px;
   border: 1px solid var(--ui-orange);
   outline: 4px solid #ff95143c;
-  background-color: #fff;
+  background-color: var(--ui-white);
 }
 
 .form__input_element:focus ~ .form__label {
@@ -217,7 +217,7 @@
     align-items: center;
 
     margin-bottom: 32px;
-    border: 2px solid #f3f3f4;
+    border: 2px solid var(--ui-forminputbcg);
     border-radius: 16px;
     padding: 26px;
   }
@@ -233,7 +233,7 @@
 }
 
 .form__agreement_link {
-  color: #111;
+  color: var(--ui-darkgray);
 }
 .socials__list {
   width: 100%;
@@ -254,7 +254,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 1px solid #828282;
+  border: 1px solid var(-ui-socialborder);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;

@@ -1,6 +1,6 @@
 .banner {
   /* padding-top: 74px; */
-  /* background-color: #111; */
+  /* background-color: var(--ui-darkgray); */
 }
 
 .slider {

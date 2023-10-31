@@ -113,7 +113,7 @@
 
 .nav__submenu_list_item {
   width: 100%;
-  color: #111;
+  color: var(--ui-darkgray);
   height: fit-content;
 }
 
@@ -129,7 +129,7 @@
 }
 
 .nav__submenu_list_item:hover {
-  background-color: #f1f1f1;
+  background-color: var(--ui-menuhover);
 }
 
 /* SUBMENU */
@@ -142,19 +142,19 @@
     background-color: var(--ui-white);
     width: auto;
     overflow: hidden;
-    border: 1px solid #f3f3f4;
+    border: 1px solid var(--ui-forminputbcg);
     border-radius: 15px;
     box-shadow: 0px 14px 24px 0px rgba(51, 51, 51, 0.12), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
   }
 
   .nav__submenu_list_item {
-    color: #111;
+    color: var(--ui-darkgray);
     padding: 8px 0;
     height: fit-content;
   }
 
   .nav__submenu_list_item:hover {
-    background-color: #f1f1f1;
+    background-color: var(--ui-menuhover);
   }
 
   .nav__submenu_link {
@@ -172,7 +172,7 @@
 }
 
 .nav__link {
-  color: #575757;
+  color: var(--ui-activegray);
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -181,7 +181,7 @@
 
 @media screen and (min-width: 1024px) {
   .nav__link {
-    color: #575757;
+    color: var(--ui-activegray);
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -193,7 +193,7 @@
 
 @media screen and (min-width: 1440px) {
   .nav__link {
-    color: #575757;
+    color: var(--ui-activegray);
     line-height: 24px;
     font-size: 16px;
     font-weight: 700;
@@ -201,7 +201,7 @@
 }
 
 .nav__link:hover {
-  background: #f3f3f4;
+  background: var(--ui-forminputbcg);
 }
 
 .nav__button {

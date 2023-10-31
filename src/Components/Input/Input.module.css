@@ -4,7 +4,7 @@
 
 .input__container {
   border-radius: 16px;
-  background-color: #f3f3f4;
+  background-color: var(--ui-forminputbcg);
   padding: 20px;
   position: relative;
   display: flex;
@@ -23,7 +23,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 136%;
-  color: #333e48;
+  color: var(--ui-secondarytext) e48;
 }
 @media screen and (min-width: 768px) {
   .input__title {
@@ -32,7 +32,7 @@
   }
 }
 .input__label {
-  color: #333e48;
+  color: var(--ui-secondarytext) e48;
   font-family: var(--font-nekst);
   font-size: 22px;
   font-style: normal;
@@ -49,7 +49,7 @@
 }
 
 .input__units {
-  color: #333e48;
+  color: var(--ui-secondarytext) e48;
   font-family: var(--font-nekst);
   font-size: 22px;
   font-style: normal;
@@ -61,7 +61,7 @@
   min-width: 72px;
   text-align: right;
   background-color: #e0e0e083;
-  color: #333e48;
+  color: var(--ui-secondarytext) e48;
   font-family: var(--font-nekst);
   font-size: 22px;
   font-style: normal;
@@ -76,7 +76,7 @@
   width: 50%;
   border: none;
   background-color: transparent;
-  color: #333e48;
+  color: var(--ui-secondarytext) e48;
   font-family: var(--font-nekst);
   font-size: 22px;
   font-style: normal;
@@ -92,7 +92,7 @@
 }
 
 .input__keyboard:focus {
-  outline: 1px solid #666;
+  outline: 1px solid var(--ui-activegray);
   border-radius: 6px;
 }
 
@@ -104,7 +104,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #e1e1e1;
+  background: var(--ui-rangetrack);
   box-shadow: 0 0 0;
   /* background-color: var(--ui-orange); */
   height: 2px;
@@ -150,14 +150,14 @@
   border-radius: 10px/100%;
   height: 2px;
   border: none;
-  background-color: #e1e1e1;
+  background-color: var(--ui-rangetrack);
 }
 
 .input__range::-moz-range-track {
   border-radius: 10px/100%;
   height: 2px;
   border: none;
-  background-color: #e1e1e1;
+  background-color: var(--ui-rangetrack);
 }
 
 .input__keyboard::-webkit-outer-spin-button,

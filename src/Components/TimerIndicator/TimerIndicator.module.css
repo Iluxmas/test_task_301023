@@ -12,13 +12,13 @@
 
 .circle__background {
   fill: none;
-  stroke: #fff;
+  stroke: var(--ui-white);
   opacity: 50%;
   stroke-width: 2;
 }
 
 .circle__fill {
   fill: none;
-  stroke: #fff;
+  stroke: var(--ui-white);
   stroke-width: 2;
 }

@@ -29,7 +29,6 @@
 .slider__next {
   width: 46px;
   height: 46px;
-  /* border: 2px solid var(--ui-white); */
   background-color: transparent;
   border-radius: 50%;
   background-image: url('../../../public/images/arrow_right.svg');
@@ -41,10 +40,10 @@
 
 .slider__next:hover,
 .slider__prev:hover {
-  background-color: #ffffff65;
+  background-color: var(--ui-arrowhover);
   opacity: 0.8;
 }
 .slider__next:active,
 .slider__prev:active {
-  background-color: #ffffff89;
+  background-color: var(--ui-arrowactive);
 }

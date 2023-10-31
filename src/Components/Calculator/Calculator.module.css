@@ -21,7 +21,7 @@
 }
 .calculator__title {
   font-family: var(--font-nekst);
-  color: #111;
+  color: var(--ui-darkgray);
   font-size: 34px;
   font-style: normal;
   font-weight: 900;
@@ -71,7 +71,7 @@
   width: 100%;
 }
 .summary__title {
-  color: #333;
+  color: var(--ui-secondarytext);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -80,7 +80,7 @@
 }
 .summary__value {
   font-family: var(--font-nekst);
-  color: #333;
+  color: var(--ui-secondarytext);
   font-size: 22px;
   font-style: normal;
   font-weight: 900;

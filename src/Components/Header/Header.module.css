@@ -3,12 +3,12 @@
   position: fixed;
   left: 0;
   z-index: 50;
-  background-color: #000;
+  background-color: var(--ui-black);
   top: 0;
 }
 @media screen and (min-width: 768px) {
   .header {
-    background-color: #fff;
+    background-color: var(--ui-white);
   }
 }
 .header__container {
@@ -65,11 +65,11 @@
 }
 
 .header__logo_accent {
-  color: #fff;
+  color: var(--ui-white);
 }
 @media screen and (min-width: 768px) {
   .header__logo_accent {
-    color: #000;
+    color: var(--ui-black);
   }
 }
 

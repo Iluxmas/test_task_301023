@@ -1,11 +1,18 @@
 :root {
   --ui-orange: #ff9514;
   --ui-white: #fff;
+  --ui-black: #000;
   --ui-darkgray: #111;
-
+  --ui-secondarytext: #333;
   --ui-activegray: #575757;
+  --ui-menuhover: #f1f1f1;
+  --ui-forminputbcg: #f3f3f4;
+  --ui-socialborder: #828282;
+  --ui-rangetrack: #e1e1e1;
   --ui-activeorange: #ffa83d;
   --ui-inputhover: #eaeaeb;
+  --ui-arrowhover: #ffffff65;
+  --ui-arrowactive: #ffffff89;
 }
 
 * {
