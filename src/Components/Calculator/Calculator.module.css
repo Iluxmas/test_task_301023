@@ -1,0 +1,142 @@
+.calculator {
+  padding: 64px 20px 48px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .calculator {
+    padding: 80px 36px 112px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .calculator {
+    padding: 80px 48px 100px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .calculator {
+    padding-bottom: 134px;
+  }
+}
+.calculator__title {
+  font-family: var(--font-nekst);
+  color: #111;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 90%;
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .calculator__title {
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 90%;
+    margin-bottom: 44px;
+  }
+}
+
+.calculator__inputs_wrappper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+  .calculator__inputs_wrappper {
+    gap: 38px;
+    margin-bottom: 44px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .calculator__inputs_wrappper {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+.calculator__summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.summary__block {
+  width: 100%;
+}
+.summary__title {
+  color: #333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136%;
+  margin-bottom: 2px;
+}
+.summary__value {
+  font-family: var(--font-nekst);
+  color: #333;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 20px;
+}
+
+.calculator__button {
+  width: 100%;
+  max-width: 320px;
+  font-family: var(--font-nekst);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 20px;
+  padding: 18px 40px 22px;
+}
+
+@media screen and (min-width: 520px) {
+  .calculator__summary {
+    flex-direction: row;
+    margin-bottom: 44px;
+  }
+  .summary__block {
+    width: calc(50% - 14px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .summary__title {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 8px;
+  }
+  .summary__value {
+    font-size: 54px;
+    line-height: 90%;
+  }
+
+  .calculator__button {
+    width: 100%;
+    max-width: 345px;
+    font-size: 30px;
+    line-height: 36px;
+    padding: 14px 50px 18px;
+  }
+}
+@media screen and (min-width: 1214px) {
+  .summary__block {
+    width: calc(33% - 7px);
+  }
+  .calculator__summary {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .calculator__button {
+    max-width: 426px;
+  }
+}

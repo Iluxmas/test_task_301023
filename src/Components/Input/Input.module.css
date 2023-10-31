@@ -1,0 +1,185 @@
+.input {
+  width: 100%;
+}
+
+.input__container {
+  border-radius: 16px;
+  background-color: #f3f3f4;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .input__container {
+    padding: 16px 24px;
+  }
+}
+
+.input__title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 136%;
+  color: #333e48;
+}
+@media screen and (min-width: 768px) {
+  .input__title {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+}
+.input__label {
+  color: #333e48;
+  font-family: var(--font-nekst);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 20px;
+  min-width: 160px;
+}
+
+@media screen and (min-width: 768px) {
+  .input__label {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.input__units {
+  color: #333e48;
+  font-family: var(--font-nekst);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 20px;
+}
+
+.input__units_percent {
+  min-width: 72px;
+  text-align: right;
+  background-color: #e0e0e083;
+  color: #333e48;
+  font-family: var(--font-nekst);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 20px;
+  padding: 14px;
+  margin: -14px;
+  border-radius: 12px;
+}
+.input__keyboard {
+  height: 20px;
+  width: 50%;
+  border: none;
+  background-color: transparent;
+  color: #333e48;
+  font-family: var(--font-nekst);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+  .input__keyboard {
+    height: 36px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.input__keyboard:focus {
+  outline: 1px solid #666;
+  border-radius: 6px;
+}
+
+.input__range {
+  position: absolute;
+  width: calc(100% - 40px);
+  bottom: -1px;
+  left: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #e1e1e1;
+  box-shadow: 0 0 0;
+  /* background-color: var(--ui-orange); */
+  height: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .input__range {
+    width: calc(100% - 48px);
+    left: 24px;
+  }
+}
+.input__range {
+  height: 2px;
+  appearance: none;
+
+  border: none;
+
+  /* overflow: hidden; */
+  outline: none;
+}
+.input__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--ui-orange);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -9px;
+  /* box-shadow: -500px 0 0 480px var(--ui-orange); */
+}
+.input__range::-moz-range-thumb {
+  appearance: none;
+  background: var(--ui-orange);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  box-shadow: -500px 0 0 480px var(--ui-orange);
+}
+
+.input__range::-webkit-slider-runnable-track {
+  border-radius: 10px/100%;
+  height: 2px;
+  border: none;
+  background-color: #e1e1e1;
+}
+
+.input__range::-moz-range-track {
+  border-radius: 10px/100%;
+  height: 2px;
+  border: none;
+  background-color: #e1e1e1;
+}
+
+.input__keyboard::-webkit-outer-spin-button,
+.input__keyboard::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input__keyboard[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.input__progress {
+  position: absolute;
+  left: 20px;
+  bottom: -1px;
+  height: 2px;
+  width: 100px;
+  background-color: var(--ui-orange);
+}
+@media screen and (min-width: 768px) {
+  .input__progress {
+    left: 24px;
+  }
+}
