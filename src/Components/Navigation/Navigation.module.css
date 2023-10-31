@@ -1,3 +1,30 @@
+.overlay {
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 750;
+  transition: opacity 0.5s ease;
+}
+
+.ovarlay_visible {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+@media screen and (min-width: 1024px) {
+  .overlay {
+    display: none;
+  }
+}
+
 .nav__burger {
   width: 32px;
   height: 32px;
@@ -216,6 +243,13 @@
   color: var(--ui-white);
   border-radius: 24px;
   padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border 0.2s ease;
+}
+
+.nav__button:hover {
+  background-color: var(--ui-darkgray);
+  border: 1px solid var(--ui-white);
 }
 
 @media screen and (min-width: 1024px) {
@@ -229,5 +263,10 @@
     border-radius: 24px;
     padding: 12px 24px;
     margin-left: 24px;
+  }
+
+  .nav__button:hover {
+    background-color: var(--ui-orange);
+    color: var(--ui-white);
   }
 }

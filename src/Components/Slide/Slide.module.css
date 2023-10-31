@@ -24,7 +24,7 @@
     padding: 70px 70px 165px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .slide {
     background-size: 841px 472px;
     background-position: bottom 18px right;

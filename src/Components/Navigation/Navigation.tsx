@@ -13,8 +13,14 @@ function Navigation({ onModalOpen }: NavigationProps) {
   const menuClass = [styles.nav];
   if (isOpened) menuClass.push(styles.nav__opened);
 
+  const handleModalClick = () => {
+    setIsOpened(false);
+    onModalOpen();
+  };
+
   return (
     <>
+      <div className={isOpened ? [styles.overlay, styles.ovarlay_visible].join(' ') : styles.overlay}></div>
       <div className={styles.nav__burger} onClick={() => setIsOpened(true)}></div>
       <nav className={menuClass.join(' ')}>
         <div className={styles.nav__close} onClick={() => setIsOpened(false)}></div>
@@ -52,7 +58,7 @@ function Navigation({ onModalOpen }: NavigationProps) {
             </a>
           </li>
         </ul>
-        <button className={styles.nav__button} onClick={onModalOpen}>
+        <button className={styles.nav__button} onClick={handleModalClick}>
           Оставить заявку
         </button>
       </nav>
