@@ -31,7 +31,7 @@ interface SliderProps {
 
 function Slider({ onModalOpen }: SliderProps) {
   const [selectedId, setSelectedId] = useState(0);
-  const [touchPosition, setTouchPosition] = useState(null);
+  const [touchPosition, setTouchPosition] = useState<number | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -59,14 +59,14 @@ function Slider({ onModalOpen }: SliderProps) {
     setSelectedId(num % slidesData.length);
   };
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: React.TouchEvent) => {
     console.log(e);
     const touchDown = e.touches[0].clientX;
 
     setTouchPosition(touchDown);
   };
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = (e: React.TouchEvent) => {
     if (touchPosition === null) {
       return;
     }

@@ -8,7 +8,7 @@ interface DotProps {
 }
 
 function Dot({ number }: DotProps) {
-  const { goToSlide, slideNumber } = useContext(SliderContext);
+  const { goToSlide, slideNumber } = useContext(SliderContext)!;
 
   return (
     <div

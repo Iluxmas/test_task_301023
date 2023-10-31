@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { SliderContext } from '../Slider/Slider';
-import styles from './Pagination.module.css';
 import Dot from '../Dot/Dot';
 
-function Pagination(props) {
-  const { slidesCount } = useContext(SliderContext);
+import styles from './Pagination.module.css';
+
+function Pagination() {
+  const { slidesCount } = useContext(SliderContext)!;
 
   const renderDots = () => {
     const dots = [];

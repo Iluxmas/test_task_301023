@@ -15,7 +15,7 @@ const RATE = 0.05;
 
 interface CalculatorProps {
   onModalOpen: () => void;
-  onRequest: (value) => void;
+  onRequest: (value: { cost: number; period: number; percent: number }) => void;
 }
 
 function Calculator({ onModalOpen, onRequest }: CalculatorProps) {

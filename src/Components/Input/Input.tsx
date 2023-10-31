@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { ChangeEvent, useEffect, useRef, useState } from 'react';
 import styles from './Input.module.css';
 import local from 'next/font/local';
 
@@ -22,7 +22,7 @@ function Input({ title, min, max, name, value, step, carCost, type = 'default', 
   const [localValue, setLocalValue] = useState(value);
   const [progressWidth, setProgressWidth] = useState(0);
 
-  const inputContainer = useRef();
+  const inputContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleEnterClick = (e: KeyboardEvent) => {
@@ -55,15 +55,18 @@ function Input({ title, min, max, name, value, step, carCost, type = 'default', 
     setIsEditing(true);
   };
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.valueAsNumber;
 
     setLocalValue(value);
   };
 
-  const handleRangeChange = (e) => {
+  const handleRangeChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.valueAsNumber;
-    const width = ((value - min) / (max - min)) * (inputContainer?.current.getBoundingClientRect().width - 48);
+
+    if (!inputContainer.current) return;
+
+    const width = ((value - min) / (max - min)) * (inputContainer.current.getBoundingClientRect().width - 48);
     setProgressWidth(width);
     setLocalValue(value);
     onChangeHandler(value);
@@ -78,7 +81,10 @@ function Input({ title, min, max, name, value, step, carCost, type = 'default', 
       onChangeHandler(max);
       setLocalValue(max);
     } else onChangeHandler(localValue);
-    const width = ((localValue - min) / (max - min)) * (inputContainer?.current.getBoundingClientRect().width - 48);
+
+    if (!inputContainer.current) return;
+
+    const width = ((localValue - min) / (max - min)) * (inputContainer.current.getBoundingClientRect().width - 48);
     setProgressWidth(width);
     setIsEditing(false);
   };

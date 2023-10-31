@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import styles from './TimerIndicator.module.css';
 
-const TimerIndicator = ({ duration }) => {
+const TimerIndicator = ({ duration }: { duration: number }) => {
   const [remainingPercentage, setRemainingPercentage] = useState(100);
 
   useEffect(() => {
-    let startTime;
-    let animationFrameId;
+    let startTime: number | null;
+    let animationFrameId: number;
 
-    const animate = (timestamp) => {
+    const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
       const elapsedTime = timestamp - startTime;
       const newRemainingPercentage = ((duration - elapsedTime) / duration) * 145.66;
