@@ -1,0 +1,43 @@
+.button {
+  border-radius: 40px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.default {
+  background-color: var(--ui-orange);
+  border: 1px solid var(--ui-orange);
+  color: var(--ui-white);
+  transition: background-color 0.2s ease, border 0.2s ease;
+}
+.default:not(:disabled):hover {
+  background-color: var(--ui-darkgray);
+  border: 1px solid var(--ui-white);
+}
+.default:not(:disabled):active {
+  background-color: var(--ui-activegray);
+  /* border: 1px solid var(--ui-white); */
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid var(--ui-orange);
+  color: var(--ui-orange);
+  transition: background-color 0.25s ease, border 0.25s ease;
+}
+.outline:not(:disabled):hover {
+  background-color: var(--ui-orange);
+  color: var(--ui-white);
+}
+.outline:not(:disabled):active {
+  background-color: var(--ui-activeorange);
+  color: var(--ui-white);
+}
