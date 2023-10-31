@@ -11,7 +11,6 @@ type SlideData = {
   h1: boolean;
   subtitle: string;
   buttonText: string;
-  backgroundColor: string;
 };
 
 export type SliderContextType = {

@@ -10,13 +10,12 @@ interface SlideProps {
     subtitle: string;
     h1: boolean;
     buttonText: string;
-    backgroundColor: string;
   };
   onButtonClick: () => void;
 }
 
 function Slide({ data, onButtonClick }: SlideProps) {
-  const { title, subtitle, h1, buttonText, backgroundColor } = data;
+  const { title, subtitle, h1, buttonText } = data;
   return (
     <div className={styles.slide} style={{ backgroundImage: `url(${Slidebackground.src})` }}>
       {/* <div className={styles.slide__background}></div> */}

@@ -67,6 +67,7 @@ function Input({ title, min, max, name, value, step, carCost, type = 'default', 
     if (!inputContainer.current) return;
 
     const width = ((value - min) / (max - min)) * (inputContainer.current.getBoundingClientRect().width - 48);
+    console.log('test1');
     setProgressWidth(width);
     setLocalValue(value);
     onChangeHandler(value);
@@ -74,17 +75,21 @@ function Input({ title, min, max, name, value, step, carCost, type = 'default', 
 
   const handleInputBlur = () => {
     if (!localValue) return;
+    if (!inputContainer.current) return;
+    let width = 0;
+
     if (localValue < min) {
       onChangeHandler(min);
       setLocalValue(min);
     } else if (localValue > max) {
       onChangeHandler(max);
       setLocalValue(max);
-    } else onChangeHandler(localValue);
+      width = inputContainer.current.getBoundingClientRect().width - 48;
+    } else {
+      onChangeHandler(localValue);
+      width = ((localValue - min) / (max - min)) * (inputContainer.current.getBoundingClientRect().width - 48);
+    }
 
-    if (!inputContainer.current) return;
-
-    const width = ((localValue - min) / (max - min)) * (inputContainer.current.getBoundingClientRect().width - 48);
     setProgressWidth(width);
     setIsEditing(false);
   };

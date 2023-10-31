@@ -34,9 +34,3 @@ a {
   font-family: var(--font-gilroy);
   text-decoration: none;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}

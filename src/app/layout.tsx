@@ -34,8 +34,23 @@ const Nekst = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Рассчет лизинга',
+  title: 'Расчет лизинга',
   description: 'Прием заявки на лизинг',
+  openGraph: {
+    title: 'Тестовое Задание Oxem',
+    description: 'Простой лендинг по расчету лизинга',
+    url: 'https://test-task-301023.vercel.app/',
+    siteName: 'Расчет лизинга',
+    images: [
+      {
+        url: 'https://github.com/Iluxmas/test_task_301023/blob/main/public/images/banner_car.jpg',
+        width: 841,
+        height: 472,
+      },
+    ],
+    locale: 'ru_RU',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
