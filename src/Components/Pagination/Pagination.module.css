@@ -1,0 +1,16 @@
+.slider__pagination {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .slider__pagination {
+    bottom: 44px;
+  }
+}

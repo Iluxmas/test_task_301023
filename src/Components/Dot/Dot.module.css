@@ -1,0 +1,14 @@
+.slider__page_selected {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--ui-white);
+}
+
+.slider__page {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--ui-white);
+  opacity: 50%;
+}

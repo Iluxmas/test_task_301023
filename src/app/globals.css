@@ -1,6 +1,11 @@
 :root {
-  --ui-orange: #FF9514;
-  --ui-white: #fff; 
+  --ui-orange: #ff9514;
+  --ui-white: #fff;
+  --ui-darkgray: #111;
+
+  --ui-activegray: #575757;
+  --ui-activeorange: #ffa83d;
+  --ui-inputhover: #eaeaeb;
 }
 
 * {
@@ -13,6 +18,11 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+#portals {
+  position: relative;
+  z-index: 2000;
 }
 
 body {

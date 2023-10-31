@@ -42,10 +42,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='ru'>
       <body className={[Gilroy.variable, Nekst.variable].join(' ')}>
-        <div className={styles.page}>
-          <Header />
-          {children}
-        </div>
+        <div id='portal'></div>
+        {children}
       </body>
     </html>
   );
