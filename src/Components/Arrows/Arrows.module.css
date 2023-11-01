@@ -24,6 +24,7 @@
   background-size: 6px 10px;
   border-radius: 50%;
   opacity: 50%;
+  cursor: pointer;
 }
 
 .slider__next {
@@ -36,6 +37,7 @@
   background-repeat: no-repeat;
   background-position: center;
   z-index: 100;
+  cursor: pointer;
 }
 
 .slider__next:hover,

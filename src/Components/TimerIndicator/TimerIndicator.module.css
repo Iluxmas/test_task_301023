@@ -1,11 +1,16 @@
 .timer {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-  position: absolute;
-  right: 0;
+  display: none;
 }
-
+@media screen and (min-width: 1024px) {
+  .timer {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: absolute;
+    right: 42px;
+    bottom: 42px;
+  }
+}
 .circular__progress {
   transform: rotate(-90deg);
 }

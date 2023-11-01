@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './TimerIndicator.module.css';
 
-const TimerIndicator = ({ duration }: { duration: number }) => {
-  const [remainingPercentage, setRemainingPercentage] = useState(100);
+const TimerIndicator = ({ duration, id }: { duration: number; id: number }) => {
+  const [remainingPercentage, setRemainingPercentage] = useState(145);
 
   useEffect(() => {
     let startTime: number | null;
@@ -29,7 +29,7 @@ const TimerIndicator = ({ duration }: { duration: number }) => {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [id]);
 
   return (
     <div className={styles.timer}>

@@ -11,4 +11,11 @@
   border-radius: 50%;
   background-color: var(--ui-white);
   opacity: 50%;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  cursor: pointer;
+}
+.slider__page:hover,
+.slider__page:active {
+  opacity: 80%;
+  transform: scale(1.4);
 }

@@ -47,7 +47,6 @@ function Input({ title, min, max, name, value, step, carCost, type = 'default', 
   useEffect(() => {
     const handleEnterClick = (e: KeyboardEvent) => {
       if (e.key === 'Enter') {
-        console.log(localValue);
         handleInputBlur();
       }
     };

@@ -59,7 +59,6 @@
 }
 
 .slide__text {
-  /* padding: 0 20px 86px; */
   z-index: 10;
 }
 @media screen and (min-width: 768px) {
@@ -76,6 +75,7 @@
   line-height: 90%;
   font-family: var(--font-nekst);
   margin-bottom: 32px;
+  user-select: none;
 }
 @media screen and (min-width: 768px) {
   .slide__title {
@@ -85,6 +85,7 @@
 
 .slide__subtitle {
   display: none;
+  user-select: none;
   color: var(--ui-white);
   font-family: var(--font-nekst);
   font-size: 30px;

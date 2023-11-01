@@ -8,21 +8,51 @@ import Socials from '../Socials/Socials';
 interface RequestFormProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (formData: { name: string; telephone: string }) => void;
+  formData: { cost: number; period: number; percent: number };
 }
 
-function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
+function RequestForm({ isOpen, onClose, formData }: RequestFormProps) {
   const [telephone, setTelephone] = useState('');
   const [name, setName] = useState('');
-
+  const [isLoading, setIsLoading] = useState(false);
   let formClass = isOpen ? [styles.modal, styles.modal_slidedown] : [styles.form];
 
   const handleSumbit = () => {
     if (!name || !telephone) {
-      console.log('ставим erorr стили на инпуты');
+      console.warn('ставим erorr стили на инпуты');
       return;
     }
-    onSubmit({ name, telephone });
+    const requestData = {
+      telephone,
+      name,
+      ...formData,
+    };
+    console.log('🟡 ОТПРАВЛЯЮТСЯ ДАННЫЕ ЗАЯВКИ 🟡');
+    console.log(requestData);
+
+    setIsLoading(true);
+
+    fetch('test.test.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log('✅ ЗАПРОС УСПЕШНО ОТПРАВЛЕН ✅');
+          return response.json();
+        } else {
+          console.log('❌ ВОЗНИКЛА ПРОБЛЕМА ПРИ ОПРАВКЕ ❌');
+        }
+      })
+      .catch((error) => {
+        console.error('❌ ВОЗНИКЛА ПРОБЛЕМА ПРИ ОПРАВКЕ ❌', error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -63,6 +93,7 @@ function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
               className={styles.form__submit}
               onButtonClick={handleSumbit}
               disabled={!name || !telephone}
+              isLoading={isLoading}
             />
             <p className={styles.form__agreement_text}>
               Нажимая на кнопку «Оставить заявку», я даю согласие{' '}

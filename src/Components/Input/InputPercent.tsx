@@ -105,7 +105,9 @@ function InputPercent({
         {title}
       </label>
       <div className={styles.input__container} ref={inputContainer}>
-        <span className={styles.input__label}>{displayValue}</span>
+        <span className={styles.input__label} style={{ userSelect: 'none' }}>
+          {displayValue}
+        </span>
 
         {isEditing ? (
           <input

@@ -1,5 +1,6 @@
 import React, { CSSProperties } from 'react';
 import styles from './Button.module.css';
+import Spinner from '../Spinner/Spinner';
 
 interface ButtonProps {
   type?: 'outline' | 'default';
@@ -8,9 +9,10 @@ interface ButtonProps {
   className?: string;
   onButtonClick: () => void;
   disabled?: boolean;
+  isLoading?: boolean;
 }
 
-function Button({ type = 'default', text, style, className, onButtonClick, disabled = false }: ButtonProps) {
+function Button({ type = 'default', text, style, className, onButtonClick, disabled = false, isLoading }: ButtonProps) {
   return (
     <button
       disabled={disabled}
@@ -18,7 +20,7 @@ function Button({ type = 'default', text, style, className, onButtonClick, disab
       style={style}
       onClick={onButtonClick}
     >
-      {text}
+      {isLoading ? <Spinner /> : text}
     </button>
   );
 }

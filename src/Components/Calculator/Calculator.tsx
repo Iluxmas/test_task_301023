@@ -5,14 +5,15 @@ import styles from './Calculator.module.css';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 import InputPercent from '../Input/InputPercent';
-
-const COST_MIN_VALUE = 1000000;
-const COST_MAX_VALUE = 6000000;
-const PERCENT_MIN_VALUE = 10;
-const PERCENT_MAX_VALUE = 60;
-const PERIOD_MIN_VALUE = 1;
-const PERIOD_MAX_VALUE = 60;
-const RATE = 0.05;
+import {
+  COST_MAX_VALUE,
+  COST_MIN_VALUE,
+  PERCENT_MAX_VALUE,
+  PERCENT_MIN_VALUE,
+  PERIOD_MAX_VALUE,
+  PERIOD_MIN_VALUE,
+  RATE,
+} from '@/data/calculatorData';
 
 interface CalculatorProps {
   onModalOpen: () => void;

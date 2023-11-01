@@ -1,10 +1,11 @@
 'use client';
-import React, { createContext, useEffect, useState } from 'react';
+import React, { Dispatch, SetStateAction, createContext, useEffect, useState } from 'react';
 import styles from './Slider.module.css';
 import Pagination from '../Pagination/Pagination';
 import SlidesList from '../SlidesList/SlidesList';
 import Arrows from '../Arrows/Arrows';
 import { slidesData } from '@/data/slidesData';
+import TimerIndicator from '../TimerIndicator/TimerIndicator';
 
 type SlideData = {
   title: string;
@@ -31,6 +32,7 @@ interface SliderProps {
 function Slider({ onModalOpen }: SliderProps) {
   const [selectedId, setSelectedId] = useState(0);
   const [touchPosition, setTouchPosition] = useState<number | null>(null);
+  const [timerKey, setTimerKey] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,18 +52,18 @@ function Slider({ onModalOpen }: SliderProps) {
     } else {
       slideNumber = (currSlide + direction) % slidesData.length;
     }
-
+    setTimerKey((prevKey) => prevKey + 1);
     setSelectedId(slideNumber);
   };
 
   const goToSlide = (num: number) => {
     setSelectedId(num % slidesData.length);
+    setTimerKey((prevKey) => prevKey + 1);
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    console.log(e);
     const touchDown = e.touches[0].clientX;
-
+    setTimerKey((prevKey) => prevKey + 1);
     setTouchPosition(touchDown);
   };
 
@@ -69,14 +71,13 @@ function Slider({ onModalOpen }: SliderProps) {
     if (touchPosition === null) {
       return;
     }
-    console.log(e);
     const currentPosition = e.touches[0].clientX;
     const direction = touchPosition - currentPosition;
 
     if (direction > 10) {
       changeSlide(selectedId, 1);
     }
-
+    setTimerKey((prevKey) => prevKey + 1);
     if (direction < -10) {
       changeSlide(selectedId, -1);
     }
@@ -100,6 +101,7 @@ function Slider({ onModalOpen }: SliderProps) {
           <SlidesList />
           <Pagination />
           <Arrows />
+          <TimerIndicator id={timerKey} duration={10000} />
         </SliderContext.Provider>
       </div>
     </section>
