@@ -17,7 +17,18 @@ interface InputProps {
   onChangeHandler: (val: number) => void;
 }
 
-function Input({ title, min, max, name, value, step, carCost, type = 'default', onChangeHandler, units }: InputProps) {
+function InputPercent({
+  title,
+  min,
+  max,
+  name,
+  value,
+  step,
+  carCost,
+  type = 'default',
+  onChangeHandler,
+  units,
+}: InputProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [localValue, setLocalValue] = useState(value);
   const [progressWidth, setProgressWidth] = useState(0);
@@ -47,7 +58,6 @@ function Input({ title, min, max, name, value, step, carCost, type = 'default', 
   useEffect(() => {
     const handleEnterClick = (e: KeyboardEvent) => {
       if (e.key === 'Enter') {
-        console.log(localValue);
         handleInputBlur();
       }
     };
@@ -95,23 +105,28 @@ function Input({ title, min, max, name, value, step, carCost, type = 'default', 
         {title}
       </label>
       <div className={styles.input__container} ref={inputContainer}>
+        <span className={styles.input__label}>{displayValue}</span>
+
         {isEditing ? (
           <input
             type='number'
             name={name}
             id={name}
+            min={min}
+            max={max}
             value={localValue}
             autoFocus
-            className={styles.input__keyboard}
-            onChange={handleInputChange}
+            className={styles.input__keyboard_percent}
             onBlur={handleInputBlur}
+            onChange={handleInputChange}
           />
         ) : (
-          <span onClick={handleLabelClick} className={styles.input__label}>
-            {displayValue}
+          <span className={styles.input__units_percent} onClick={handleLabelClick}>
+            {value}
+            {units}
           </span>
         )}
-        <span className={styles.input__units}>{units}</span>
+
         <input
           type='range'
           className={styles.input__range}
@@ -129,4 +144,4 @@ function Input({ title, min, max, name, value, step, carCost, type = 'default', 
   );
 }
 
-export default Input;
+export default InputPercent;

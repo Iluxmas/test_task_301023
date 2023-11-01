@@ -79,22 +79,57 @@
   background-color: transparent;
   color: var(--ui-secondarytext) e48;
   font-family: var(--font-nekst);
+  padding-top: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 18px;
+}
+.input__keyboard_percent {
+  display: inline-block;
+  height: 48px;
+  width: 72px;
+  border: none;
+  background-color: transparent;
+  color: var(--ui-secondarytext) e48;
+  font-family: var(--font-nekst);
+  padding-top: 0;
   font-size: 22px;
   font-style: normal;
   font-weight: 900;
-  line-height: 20px;
+  line-height: 36px;
+  background-color: #e0e0e083;
+  padding: 14px 20px;
+  margin: -14px;
+  border-radius: 12px;
 }
+
 @media screen and (min-width: 768px) {
   .input__keyboard {
     height: 36px;
     font-size: 30px;
     line-height: 36px;
   }
+  .input__keyboard_percent {
+    height: 46px;
+    font-size: 22px;
+    line-height: 36px;
+  }
 }
-
+@media screen and (min-width: 1024px) {
+  .input__keyboard_percent {
+    height: 48px;
+    font-size: 22px;
+    line-height: 36px;
+  }
+}
 .input__keyboard:focus {
   outline: 1px solid var(--ui-activegray);
   border-radius: 6px;
+}
+
+.input__keyboard_percent:focus {
+  outline: none;
 }
 
 .input__range {
@@ -157,7 +192,9 @@
 }
 
 .input__keyboard::-webkit-outer-spin-button,
-.input__keyboard::-webkit-inner-spin-button {
+.input__keyboard::-webkit-inner-spin-button,
+.input__keyboard_percent::-webkit-outer-spin-button,
+.input__keyboard_percent::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }

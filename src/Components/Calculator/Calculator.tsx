@@ -4,6 +4,7 @@ import React, { useMemo, useState } from 'react';
 import styles from './Calculator.module.css';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import InputPercent from '../Input/InputPercent';
 
 const COST_MIN_VALUE = 1000000;
 const COST_MAX_VALUE = 6000000;
@@ -53,7 +54,7 @@ function Calculator({ onModalOpen, onRequest }: CalculatorProps) {
           onChangeHandler={(val) => setCost(val)}
           units='₽'
         />
-        <Input
+        <InputPercent
           title='Первоначальный взнос'
           min={PERCENT_MIN_VALUE}
           max={PERCENT_MAX_VALUE}

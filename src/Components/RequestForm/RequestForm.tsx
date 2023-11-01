@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from './RequestForm.module.css';
 import Button from '../Button/Button';
 import { InputMask } from '@react-input/mask';
+import Socials from '../Socials/Socials';
 
 interface RequestFormProps {
   isOpen: boolean;
@@ -40,8 +41,8 @@ function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
                 replacement='X'
                 showMask={true}
                 className={styles.form__input_element}
-                value={telephone ?? ''}
-                onMask={(event) => setTelephone(event.detail.value)}
+                value={telephone}
+                onMask={(e) => setTelephone(e.detail.value)}
               />
               <span className={styles.form__label}>Телефон *</span>
             </div>
@@ -65,19 +66,12 @@ function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
             />
             <p className={styles.form__agreement_text}>
               Нажимая на кнопку «Оставить заявку», я даю согласие{' '}
-              <a href='' target='_blank' className={styles.form__agreement_link}>
+              <a href='#' target='_blank' className={styles.form__agreement_link}>
                 на обработку персональных данных
               </a>
             </p>
           </div>
-          <ul className={styles.socials__list}>
-            <li className={styles.socials__list_item}>
-              <a href='#' className={[styles.social__link, styles.social__item_whatsapp].join(' ')} target='_blank'></a>
-            </li>
-            <li className={styles.socials__list_item}>
-              <a href='#' className={[styles.social__link, styles.social__item_telegram].join(' ')} target='_blank'></a>
-            </li>
-          </ul>
+          <Socials />
         </div>
       </div>
     </div>

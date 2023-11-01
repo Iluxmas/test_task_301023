@@ -1,0 +1,30 @@
+.socials__list {
+  width: 100%;
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.socials__list_item {
+  width: 48px;
+  height: 48px;
+}
+.social__link {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--ui-socialborder);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+.social__item_whatsapp {
+  background-image: url('../../../public/images/whatsapp.svg');
+}
+.social__item_telegram {
+  background-image: url('../../../public/images/telegram.svg');
+}
