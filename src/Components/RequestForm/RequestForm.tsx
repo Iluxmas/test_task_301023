@@ -27,7 +27,7 @@ function RequestForm({ isOpen, onClose, formData }: RequestFormProps) {
       name,
       ...formData,
     };
-    console.log('🟡 ОТПРАВЛЯЮТСЯ ДАННЫЕ ЗАЯВКИ 🟡');
+    console.log('🟡 ДАННЫЕ ЗАЯВКИ: 🟡');
     console.log(requestData);
 
     setIsLoading(true);

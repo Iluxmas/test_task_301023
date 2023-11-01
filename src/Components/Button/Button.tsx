@@ -16,7 +16,7 @@ function Button({ type = 'default', text, style, className, onButtonClick, disab
   return (
     <button
       disabled={disabled}
-      className={[styles.button, className, styles[type]].join(' ')}
+      className={[styles.button, styles[type], className].join(' ')}
       style={style}
       onClick={onButtonClick}
     >
